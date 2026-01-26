@@ -48,6 +48,12 @@ a {
     left: 16px;
 }
 
+.outsideToggle:hover {
+    cursor: pointer;
+    background-color: #d1d1d1;
+    border-radius: 5px;
+}
+
 
 .iconsSpacing {
     display: grid;
@@ -74,6 +80,25 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 18px;
+}
+
+.insidetoggle {
+    padding: 5px;
+}
+
+.bellIcon {
+    padding: 5px;
+}
+
+.bellIcon:hover {
+    background-color: #d1d1d1;
+    border-radius: 5px;
+}
+
+.insidetoggle:hover {
+    background-color: #d1d1d1;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .inbox {
@@ -164,6 +189,7 @@ a {
 .rightIcons {
     display: flex;
     align-items: center;
+    padding: 5px;
     gap: 13px;
 }
 
