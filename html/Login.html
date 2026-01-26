@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Taskify</title>
+    <link rel="stylesheet" href="/CSS/login.css">
+    <link rel="stylesheet" href="/CSS/common.css">
+    <link rel=" icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="login">
+            <div class="login-logo">
+                <h1>TASKIFY</h1>
+                <h2>Sign up</h2>
+            </div>
+
+            <div class="login-btns">
+                <ul>
+                    <li><a href="#"> <i class="fa-brands fa-google"></i>Continue with Google</a> </li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i>Continue with Facebook</a></li>
+                    <li><a href="#"><i class="fa-brands fa-apple"></i>Continue with Apple</a></li>
+                </ul>
+            </div>
+
+            <form class="input-bars">
+                <div class="input-group">
+                    <label for="Email">Email </label>
+                    <input type="email" name="Email" id="Email" placeholder="Enter your personal or work email.."
+                        required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" minlength="8" required>
+                    <button type="button" class="toggle-password" id="togglePwdBtn" aria-pressed="false"
+                        aria-label="Show password">
+                        <!-- eye (visible) -->
+                        <svg id="eye-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
+                            fill="none" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            role="img" aria-hidden="true">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+
+                        <!-- eye-off (hidden) - eye outline + solid slash line across -->
+                        <svg id="eye-closed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
+                            height="20" fill="none" stroke="#666" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" role="img" aria-hidden="true" style="display:none;">
+                            <!-- eye outline -->
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                            <!-- pupil -->
+                            <circle cx="12" cy="12" r="3" />
+                            <!-- full slash line (covers the icon cleanly) -->
+                            <line x1="3.5" y1="3.5" x2="20.5" y2="20.5" stroke-linecap="round" stroke-width="2.4" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="ct">
+                    <button type="submit" class="login-btn">Sign up with Email</button>
+                </div>
+            </form>
+
+            <div class="footer">
+                <p>By continuing with Google, Apple, Email, you agree to Taskify's <a href="#">Terms of Service</a>
+                    and
+                    <a href="#">Privacy Policy</a>
+                </p>
+                <hr>
+                <p class="sg-up"> Already signed up? <a href="#">Go to Service</a></p>
+            </div>
+        </div>
+        <div class="design-template">
+            <img src="/images/Login.png " alt="task template">
+        </div>
+    </div>
+
+    <script src="/JS/login.js" type="module"></script>
+</body>
+
+</html>

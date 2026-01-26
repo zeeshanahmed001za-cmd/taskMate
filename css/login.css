@@ -1,0 +1,223 @@
+    body {
+        font-family: var(--defaultFontFamily);
+    }
+
+    #container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-width: 100vh;
+    }
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        padding: 20px;
+    }
+
+    .login-logo h1 {
+        width: 100%;
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        font-size: 30px;
+        font-weight: bolder;
+        color: #22C55E;
+    }
+
+    .login-logo h2 {
+        font-size: 31px;
+        font-weight: bold;
+    }
+
+    .login-btns ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px;
+        gap: 15px;
+    }
+
+    .login-btns ul li a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 15px;
+
+        padding: 12px 30px;
+
+        min-width: 400px;
+        height: 50px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .login-btns ul li:nth-child(1) a {
+        background-color: #fff;
+        color: rgb(0, 0, 0);
+    }
+
+    .login-btns ul li:nth-child(2) a {
+        background-color: #5457ff;
+        color: white;
+    }
+
+    .login-btns ul li:nth-child(3) a {
+        background-color: #000000;
+        color: white;
+    }
+
+    .login-btns ul li a:hover {
+        background-color: #ececec;
+    }
+
+    .login-btns ul li:nth-child(2):hover a {
+        color: #5457ff;
+    }
+
+    .login-btns ul li:nth-child(3):hover a {
+        color: #000000;
+    }
+
+    .input-bars input {
+        width: 100%;
+        padding: 25px 10px 8px 10px;
+        /* top-bottom and left-right padding */
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        outline: none;
+        height: 45px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 15px;
+        box-sizing: border-box;
+    }
+
+    .input-group {
+        position: relative;
+        margin-top: 20px;
+    }
+
+    .input-group input {
+        width: 100%;
+        height: 45px;
+        padding: 18px 40px 8px 10px;
+        /* space for the eye icon */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 15px;
+        box-sizing: border-box;
+        outline: none;
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .input-group input:focus {
+        border-color: #525252;
+        box-shadow: 0 0 2px #393939;
+    }
+
+    .toggle-password {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        background: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .toggle-password svg {
+        transition: 0.3s ease;
+    }
+
+    .toggle-password:hover svg {
+        stroke: #222;
+    }
+
+    .input-group label {
+        position: absolute;
+        top: 0;
+        left: 6px;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 0 4px;
+        pointer-events: none;
+
+    }
+
+    .input-group input .input-bars input:focus {
+        border-color: #525252;
+        box-shadow: 0 0 2px #393939;
+    }
+
+    .input-bars div {
+        display: flex;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+
+    .login-btn {
+        background: linear-gradient(135deg, #22c55e, #058a36, #89f087);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        box-shadow: 0 6px 14px rgba(34, 197, 94, 0.3);
+        padding: 0 180px;
+        height: 45px;
+    }
+
+    .login-btn:hover {
+        background: linear-gradient(135deg, #25d066, #089a3f, #a1d4a1);
+    }
+
+    .login-btn:active {
+        box-shadow: 0 3px 8px rgba(34, 197, 94, 0.25);
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        width: 70ch;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .sg-up {
+        text-align: center;
+    }
+
+    .footer a {
+        color: #22C55E;
+    }
+
+    .design-template {
+        display: flex;
+        justify-content: center;
+
+        max-height: 100vh;
+        width: 50vw;
+    }
+
+    .design-template img {
+        display: flex;
+        justify-content: center;
+
+        height: 100vh;
+        width: 50vw;
+        object-fit: cover;
+    }

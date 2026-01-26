@@ -1,0 +1,25 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+
+ :root {
+     /* colors */
+     --color-primary: #22c55e;
+     --color-secondar: #fff;
+     /* Site Font */
+     --defaultFontFamily: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+     /* buttons and anchor default prevention */
+     --font-size1: 13px;
+     --font-size2: 17px;
+     --font-color: rgb(77, 77, 77);
+     --button-background: none;
+     --button-border: none;
+     --buttonBorderRadius: 5px;
+     --anchorTextDecoration: none;
+     --anchorColor: #000;
+     --list-default: none;
+
+ }

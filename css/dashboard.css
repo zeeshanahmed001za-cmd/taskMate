@@ -1,0 +1,252 @@
+body {
+    font-family: var(--defaultFontFamily);
+}
+
+button {
+    background: var(--button-background);
+    border: var(--button-border);
+}
+
+a {
+    color: var(--anchorColor);
+    text-decoration: var(--anchorTextDecoration);
+}
+
+
+.taskifysNav {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+    padding: 0 10px;
+    font-weight: 100;
+    background-color: #f1fff6;
+}
+
+/* collapsed state */
+.taskifysNav.collapsed {
+    transform: translatex(-100%);
+}
+
+/* open state */
+.taskifysNav.open {
+    transform: translatex(0);
+    width: 280px;
+}
+
+
+.taskifysNav.collapsed+.outsideToggle {
+    visibility: visible;
+}
+
+.outsideToggle {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+
+    z-index: 1200;
+    /* higher than sidebar */
+    display: none;
+    /* hidden by default */
+}
+
+
+.iconsSpacing {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.toggleOBar {
+    display: flex;
+    align-items: center;
+    margin-left: 18px;
+}
+
+.outsideToggle {
+    padding: 5px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.toggleOutside {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+}
+
+.inbox {
+    display: flex;
+    justify-content: center;
+}
+
+.secondGrandChild {
+    display: grid;
+    grid-template-columns: 0px 850px 0px;
+}
+
+.actualInbox {
+    padding: 5px;
+}
+
+.additionalOptions {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+}
+
+.addIcons {
+    display: flex;
+    gap: 12px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    background: none;
+    border: none;
+}
+
+.listSectionContainer {
+    display: flex;
+    justify-content: center;
+}
+
+
+.emptyStateImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textBox {
+    width: 35ch;
+    text-align: center;
+}
+
+.emptyStateImg img {
+    width: 250px;
+}
+
+.addBtn {
+    display: flex;
+    justify-content: center;
+}
+
+.addBtn button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin-top: 10px;
+    gap: 10px;
+    border-radius: 5px;
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.profileContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 5px; */
+}
+
+.left button {
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rightIcons {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.profileName {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.profileIcon img {
+    width: 23px;
+}
+
+.addSection {
+    display: flex;
+    justify-content: space-between;
+}
+
+.addSection button {
+    color: var(--color-primary);
+}
+
+.addbtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+}
+
+.subLayout {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    /* justify-content: space-between; */
+}
+
+
+.subLayout li {
+    list-style: var(--list-default);
+}
+
+
+.icon[aria-current="page"] {
+    background-color: #bbf9cf;
+    border-radius: 5px;
+    color: #385944;
+}
+
+.helpAndResourceContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.questionIcon {
+    display: flex;
+    align-items: center;
+    color: var(--font-color);
+    font-size: var(--font-size);
+}
+
+.sub2Container {
+    margin: 27px 0;
+}
+
+.list1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* my projects */
+.text {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--font-color);
+}
