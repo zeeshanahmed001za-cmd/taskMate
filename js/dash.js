@@ -22,16 +22,17 @@ navItems.forEach(item => {
 
 /* ---------------- Sidebar toggle ---------------- */
 
-// Initial state
+
+// Initial state: sidebar open, outside toggle hidden
 sideBar.classList.add("open");
-openBtn.style.display = "none";
+openBtn.style.visibility = "hidden";
 
 // Close sidebar (inside button)
 closeBtn.addEventListener("click", () => {
-    sideBar.classList.add("collapsed");
     sideBar.classList.remove("open");
+    sideBar.classList.add("collapsed");
 
-    openBtn.style.visibility = "visible"; // show outside button
+    openBtn.style.visibility = "visible"; //
 });
 
 // Open sidebar (outside button)
@@ -41,5 +42,5 @@ openBtn.addEventListener("click", (e) => {
     sideBar.classList.remove("collapsed");
     sideBar.classList.add("open");
 
-    openBtn.style.visibility = "hidden"; // hide outside button
+    openBtn.style.visibility = "hidden"; // 
 });

@@ -42,25 +42,16 @@ a {
 }
 
 
-.taskifysNav.collapsed+.outsideToggle {
-    visibility: visible;
-}
-
 .outsideToggle {
-    position: fixed;
-    top: 16px;
+    position: absolute;
+    top: 10px;
     left: 16px;
-
-    z-index: 1200;
-    /* higher than sidebar */
-    display: none;
-    /* hidden by default */
 }
 
 
 .iconsSpacing {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 280px 1fr auto;
 }
 
 .toggleOBar {
