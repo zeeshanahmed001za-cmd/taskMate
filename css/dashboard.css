@@ -12,6 +12,12 @@ a {
     text-decoration: var(--anchorTextDecoration);
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
 
 .taskifysNav {
     width: 280px;
@@ -134,31 +140,35 @@ a {
     border: none;
 }
 
-.listSectionContainer {
-    display: flex;
-    justify-content: center;
+
+
+.listViewSection {
+    width: 100%;
+    height: 84%;
 }
 
-
-.emptyStateImg {
+.listSectionLayout {
     display: flex;
-    justify-content: center;
     align-items: center;
+    max-width: 500px;
+    /* height: 300px; */
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
 }
 
-.textBox {
-    width: 35ch;
+.emptyState {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
 }
 
 .emptyStateImg img {
     width: 250px;
 }
 
-.addBtn {
-    display: flex;
-    justify-content: center;
-}
 
 .addBtn button {
     display: flex;

@@ -2,7 +2,7 @@ const mockUser = document.getElementById("username");
 const navItems = document.querySelectorAll(".subContainer .icon");
 const sideBar = document.getElementById("sideBar");
 const closeBtn = document.getElementById("toggleInside");
-const openBtn = document.getElementById("outsideToggleBar");
+const openBtn = document.getElementById("toggleOutside");
 
 /* ---------------- Profile ---------------- */
 
