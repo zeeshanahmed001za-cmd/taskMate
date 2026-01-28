@@ -109,6 +109,13 @@ body {
 .inbox {
     display: flex;
     justify-content: center;
+    margin-left: 280px;
+    transition: margin-left 0.3s ease;
+}
+
+.inbox.expand {
+    margin-left: 0;
+
 }
 
 .secondGrandChild {
@@ -118,6 +125,8 @@ body {
 
 .actualInbox {
     padding: 5px;
+
+
 }
 
 .additionalOptions {
@@ -142,8 +151,14 @@ body {
 
 
 .listViewSection {
-    width: 100%;
+    margin-left: 280px;
+    padding: 40px;
     height: 84%;
+    transition: margin-left 0.3s ease;
+}
+
+.listViewSection.expanded {
+    margin-left: 0;
 }
 
 .listSectionLayout {

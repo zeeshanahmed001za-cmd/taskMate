@@ -3,6 +3,8 @@ const navItems = document.querySelectorAll(".subContainer .icon");
 const sideBar = document.getElementById("sideBar");
 const closeBtn = document.getElementById("toggleInside");
 const openBtn = document.getElementById("toggleOutside");
+const inboxHeader = document.getElementById("inboxIdSection");
+const listSection = document.getElementById("listIdsection")
 
 /* ---------------- Profile ---------------- */
 
@@ -29,8 +31,8 @@ openBtn.style.visibility = "hidden";
 
 // Close sidebar (inside button)
 closeBtn.addEventListener("click", () => {
-    sideBar.classList.remove("open");
-    sideBar.classList.add("collapsed");
+    sideBar.classList.toggle("open");
+    sideBar.classList.toggle("collapsed");
 
     openBtn.style.visibility = "visible"; //
 });
@@ -39,8 +41,19 @@ closeBtn.addEventListener("click", () => {
 openBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
-    sideBar.classList.remove("collapsed");
-    sideBar.classList.add("open");
+    sideBar.classList.toggle("collapsed");
+    sideBar.classList.toggle("open");
 
     openBtn.style.visibility = "hidden"; // 
 });
+/* ---------------- Responsive design---------------- */
+
+closeBtn.addEventListener("click", () => {
+    inboxHeader.classList.add('expand');
+    listSection.classList.add('expanded');
+});
+openBtn.addEventListener("click", () => {
+    inboxHeader.classList.remove('expand');
+    listSection.classList.remove('expanded');
+});
+
