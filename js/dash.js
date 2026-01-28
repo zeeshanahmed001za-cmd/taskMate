@@ -57,3 +57,25 @@ openBtn.addEventListener("click", () => {
     listSection.classList.remove('expanded');
 });
 
+/* ---------------- Responsive sidebar(shortcuts)---------------- */
+
+function togglesidebar() {
+    const isOpen = sideBar.classList.contains('open');
+
+    sideBar.classList.toggle("open");
+    sideBar.classList.toggle("collapsed");
+
+    openBtn.style.visibility = isOpen ? "visible" : "hidden";
+
+    inboxHeader.classList.toggle("expand", isOpen);
+    listSection.classList.toggle("expanded", isOpen);
+}
+document.addEventListener("keydown", (e) => {
+    const isMacShortcut = e.metaKey && e.shiftKey && e.key.toLowerCase() === "s";
+    const isWinShortcut = e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "s";
+
+    if (isMacShortcut || isWinShortcut) {
+        e.preventDefault();
+        togglesidebar();
+    }
+})
