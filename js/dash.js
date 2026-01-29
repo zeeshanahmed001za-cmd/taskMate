@@ -80,9 +80,9 @@ document.addEventListener("keydown", (e) => {
     }
 })
 /* --------------------- Task-----------------*/
-let currentView = 'inbox';
-let selectedPriority = null;
-let tasks = JSON.parse(localStorage.getItem('tasks')) || []; // JSON.parse convertes the stored string value from localstorage into usuable JS data
+let currentView = 'inbox'; //it tells which part of the page is active 
+let selectedPriority = null; //stores the currently selected priority filter(null-> no priority)
+let tasks = JSON.parse(localStorage.getItem('tasks')) || []; // JSON.parse convertes the stored string value from localstorage into usable JS data
 
 
 // Render Tasks
@@ -98,12 +98,14 @@ function renderTasks() {
         return;
     }
 
+    //initially empty state hidden
     emptyState.style.display = 'none';
 
     container.innerHTML = filteredTasks.map(task => {
         const priorityClass = task.priority ? `priority-${task.priority}` : '';
         const priorityLabel = task.priority ? `P${task.priority}` : '';
 
+        // dynamic HTML rendering
         return `
             <div class="task-item ${task.completed ? 'completed' : ''}" data-id="${task.id}">
                 <div class="task-checkbox ${task.completed ? 'completed' : ''}" onclick="toggleTask(${task.id})">
@@ -141,7 +143,7 @@ function renderTasks() {
                 </div>
             </div>
         `;
-    }).join('');
+    }).join(''); // built-in js array method that combines all elements of an array into single string
 }
 
 // Filter tasks by view
