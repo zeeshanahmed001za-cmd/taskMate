@@ -351,6 +351,8 @@
                         </div>
                         <!-- Add task button -->
                         <button class="add-task-btn" onclick="addTask()">Add Task</button>
+
+
                     </div>
                 </div>
             </div>
@@ -359,33 +361,34 @@
             <div class="task-list" id="task-list"></div>
 
             <!-- Empty State -->
-            <div class="listSectionLayout"></div>
-            <div class="emptyState" id="empty-state" style="display: none;">
-                <div class="emptyStateImg">
-                    <img src="/images/inbox.png" alt="EmptyInboxImg">
-                </div>
-                <div class="textBox">
-                    <div class="subText">
-                        <span>List out and complete it</span>
+            <div class="listSectionLayout">
+                <div class="emptyState" id="empty-state" style="display: none;">
+                    <div class="emptyStateImg">
+                        <img src="/images/inbox.png" alt="EmptyInboxImg">
                     </div>
-                    <div class="subDescriptionContainer">
-                        <div class="subDescription">
-                            <span>A simple place to capture thoughts now and shape them later.</span>
+                    <div class="textBox">
+                        <div class="subText">
+                            <span>List out and complete it</span>
+                        </div>
+                        <div class="subDescriptionContainer">
+                            <div class="subDescription">
+                                <span>A simple place to capture thoughts now and shape them later.</span>
+                            </div>
                         </div>
                     </div>
+                    <div class="addBtn">
+                        <button class="ctaBtn">
+                            <div class="icon">
+                                <svg width="13" height="13">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.5.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span>Add Task</span>
+                        </button>
+                    </div>
                 </div>
-                <div class="addBtn">
-                    <button class="ctaBtn">
-                        <div class="icon"><svg width="13" height="13">
-                                <path fill="currentColor" fill-rule="evenodd"
-                                    d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.5.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1z">
-                                </path>
-                            </svg>
-                        </div>
-                        <span>Add Task</span>
-                    </button>
-                </div>
-            </div>
         </section>
     </div>
     <script src="/js/dash.js" defer></script>

@@ -165,7 +165,6 @@ body {
     display: flex;
     align-items: center;
     max-width: 500px;
-    /* height: 300px; */
     margin-left: auto;
     margin-right: auto;
     flex-direction: column;
@@ -183,10 +182,14 @@ body {
     width: 250px;
 }
 
+.addBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .addBtn button {
     display: flex;
-    justify-content: center;
     align-items: center;
     padding: 8px;
     margin-top: 10px;
@@ -195,6 +198,8 @@ body {
     background-color: var(--color-primary);
     color: #fff;
 }
+
+
 
 .profileContainer {
     display: flex;
@@ -351,6 +356,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding-top: 15px;
 }
 
 /* task list interior */
