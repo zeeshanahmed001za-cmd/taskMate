@@ -323,32 +323,44 @@
     <div class="listViewSection" id="listIdsection">
         <!-- Task container, list -->
         <section>
-            <div class="taskContainer">
-                <div class="taskLayout">
-                    <!-- <form action="">
-                        <div class="taskEditiorArea">
-                            <div class="taskEditorInputFields">
-                                <div class="taskEditiorInputField">
-                                    <input type="checkbox" name="task1">
-                                    <span class="checkmark"></span>
-                                    Finish the project
-                                </div>
-                                <div class="taskEditiorDescriptionContainer">
-
-                                </div>
+            <!-- Task Input -->
+            <div class="task-input-container">
+                <div class="task-input-wrapper">
+                    <!-- Task input text field -->
+                    <input type="text" class="task-input" id="new-task-input" placeholder="Add a task...">
+                    <!-- Date -->
+                    <div class="task-input-actions">
+                        <input type="date" id="task-date-input" class="task-meta-btn">
+                        <!-- Priority -->
+                        <div class="priority-selector">
+                            <div class="priority-option p1" data-priority="1" onclick="selectPriority(1)">
+                                <svg class="priority-flag" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"></path>
+                                </svg>
                             </div>
-                            <div class="taskEditiorOptionBox"></div>
+                            <div class="priority-option p2" data-priority="2" onclick="selectPriority(2)">
+                                <svg class="priority-flag" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"></path>
+                                </svg>
+                            </div>
+                            <div class="priority-option p3" data-priority="3" onclick="selectPriority(3)">
+                                <svg class="priority-flag" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"></path>
+                                </svg>
+                            </div>
                         </div>
-                        <div class="taskFooterArea"></div>
-                    </form> -->
-
-                    <div class="taskBox"></div>
+                        <!-- Add task button -->
+                        <button class="add-task-btn" onclick="addTask()">Add Task</button>
+                    </div>
                 </div>
-
             </div>
-        </section>
-        <div class="listSectionLayout">
-            <div class="emptyState">
+
+            <!-- Task List -->
+            <div class="task-list" id="task-list"></div>
+
+            <!-- Empty State -->
+            <div class="listSectionLayout"></div>
+            <div class="emptyState" id="empty-state" style="display: none;">
                 <div class="emptyStateImg">
                     <img src="/images/inbox.png" alt="EmptyInboxImg">
                 </div>
@@ -374,7 +386,7 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
     <script src="/js/dash.js" defer></script>
 </body>

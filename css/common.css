@@ -14,12 +14,22 @@
      /* buttons and anchor default prevention */
      --font-size1: 13px;
      --font-size2: 17px;
-     --font-color: rgb(77, 77, 77);
+     --font-color: rgb(0, 0, 0);
      --button-background: none;
      --button-border: none;
      --buttonBorderRadius: 5px;
      --anchorTextDecoration: none;
      --anchorColor: #000;
      --list-default: none;
-
+     --bg-primary: #0a0a0a;
+     --bg-secondary: #ffffff;
+     --text-primary: #000000;
+     --text-secondary: #353232;
+     --text-muted: #666;
+     --accent-green: #22c55e;
+     --accent-red: #ef4444;
+     --accent-amber: #f59e0b;
+     --accent-green: #10b981;
+     --border: #929292;
+     --hover: #252525;
  }
