@@ -159,22 +159,6 @@ function filterTasksByView(view) {
     return tasks; // inbox = all tasks
 }
 
-// Select View
-function selectView(view) {
-    currentView = view;
-    window.location.hash = view;
-
-    document.querySelectorAll('.nav-item').forEach(item => {
-        item.classList.remove('active');
-        if (item.dataset.view === view) {
-            item.classList.add('active');
-        }
-    });
-
-    renderTasks();
-    updateTaskCounts();
-}
-
 // Add Task
 function addTask() {
     const input = document.getElementById('new-task-input');
