@@ -297,6 +297,10 @@ body {
     color: var(--font-color);
 }
 
+.hidden {
+    display: none;
+}
+
 .task-input-wrapper {
     background: var(--bg-secondary);
     border: 2px solid var(--border);
@@ -337,18 +341,31 @@ body {
     gap: 6px;
 }
 
-/* Task add button */
-.add-task-btn {
+.taskListBtns {
     margin-left: auto;
+}
+
+/* cancel task button */
+.cancelTaskBtn {
     padding: 8px 20px;
-    background: var(--accent-green);
+    background-color: var(--cancel-button);
     color: white;
-    border: none;
     border-radius: 6px;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s ease;
+    margin-right: 7px;
+}
+
+/* Task add button */
+.add-task-btn {
+    padding: 8px 20px;
+    background: var(--accent-green);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 /* Task list */

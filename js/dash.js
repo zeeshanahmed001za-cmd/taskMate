@@ -88,18 +88,9 @@ let tasks = JSON.parse(localStorage.getItem('tasks')) || []; // JSON.parse conve
 // Render Tasks
 function renderTasks() {
     const container = document.getElementById('task-list');
-    const emptyState = document.getElementById('empty-state');
+    // const emptyState = document.getElementById('empty-state');
 
     let filteredTasks = filterTasksByView(currentView); // selects which task should be visible right now
-
-    if (filteredTasks.length === 0) {
-        container.innerHTML = '';
-        emptyState.style.display = 'block';
-        return;
-    }
-
-    //initially empty state hidden
-    emptyState.style.display = 'none';
 
     container.innerHTML = filteredTasks.map(task => {
         const priorityClass = task.priority ? `priority-${task.priority}` : '';
@@ -165,7 +156,8 @@ function addTask() {
     const dateInput = document.getElementById('task-date-input');
     const text = input.value.trim();
 
-    if (!text) return;
+
+    if (!text) return; // runs when the text is empty, missing
 
     const task = {
         id: Date.now(),
@@ -188,6 +180,7 @@ function addTask() {
 
     renderTasks();
     updateTaskCounts();
+    updateUIState();
 }
 
 // Toggle Task
@@ -198,6 +191,7 @@ function toggleTask(id) {
         saveTasks();
         renderTasks();
         updateTaskCounts();
+        updateUIState();
     }
 }
 
@@ -207,6 +201,7 @@ function deleteTask(id) {
     saveTasks();
     renderTasks();
     updateTaskCounts();
+    updateUIState();
 }
 
 // Select Priority
@@ -256,5 +251,53 @@ function saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
+
+
+const taskInput = document.getElementById("inputTaskContainer");
+const emptyAddBtn = document.getElementById("emptyAddTaskBtn");
+const emptyState = document.getElementById('empty-state');
+
+
+emptyAddBtn.addEventListener("click", () => {
+    // hide empty state
+    emptyState.classList.add("hidden");
+
+    // show task input box
+    taskInput.classList.remove("hidden");
+
+    // optional: focus input
+    document.getElementById("new-task-input").focus();
+});
+// cancel button
+const cancelBtn = document.getElementById("cancel-Task-btn");
+
+cancelBtn.addEventListener("click", () => {
+    taskInput.classList.add("hidden");
+});
+
+// responsive input task container 
+const taskinputfield = document.getElementById("new-task-input");
+
+taskinputfield.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        addTask();
+    }
+});
+
+// ui state when task exist or not
+
+function updateUIState() {
+    const emptyState = document.getElementById("empty-state");
+    const taskInput = document.getElementById("inputTaskContainer");
+
+    if (tasks.length === 0) {
+        emptyState.classList.remove("hidden");
+        taskInput.classList.add("hidden");
+    } else {
+        emptyState.classList.add("hidden");
+        taskInput.classList.remove("hidden");
+    }
+}
 // Initialize app
 init();
